@@ -72,7 +72,7 @@ async function scanDynamoRecords(scanParams, itemArray) {
     }
     return itemArray;
   } catch(error) {
-    console.error('Do your custom error handling here. I am just gonna log it: ', error);
+    console.error('Invalid input !', error);
   }
 }
 
@@ -89,7 +89,7 @@ async function saveProduct(requestBody) {
     }
     return buildResponse(200, body);
   }, (error) => {
-    console.error('Do your custom error handling here. I am just gonna log it: ', error);
+    console.error('Invalid input !', error);
   })
 }
 
@@ -113,7 +113,7 @@ async function modifyProduct(productId, updateKey, updateValue) {
     }
     return buildResponse(200, body);
   }, (error) => {
-    console.error('Do your custom error handling here. I am just gonna log it: ', error);
+    console.error('Invalid input !', error);
   })
 }
 
@@ -133,7 +133,7 @@ async function deleteProduct(productId) {
     }
     return buildResponse(200, body);
   }, (error) => {
-    console.error('Do your custom error handling here. I am just gonna log it: ', error);
+    console.error('Invalid input !', error);
   })
 }
 
