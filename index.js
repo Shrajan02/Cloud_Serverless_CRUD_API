@@ -47,7 +47,7 @@ async function getProduct(productId) {
   return await dynamodb.get(params).promise().then((response) => {
     return buildResponse(200, response.Item);
   }, (error) => {
-    console.error('Do your custom error handling here. I am just gonna log it: ', error);
+    console.error('Invalid input !', error);
   });
 }
 
